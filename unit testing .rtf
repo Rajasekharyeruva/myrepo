@@ -1,0 +1,97 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+Junit:\
+\
+@Before:before annotation is executed just before every test. \
+@After :after annotation is executed just after every test.\
+\
+@BeforeClass: before class annotation is executed just once that is only just before all the tests.\
+@After class :after class annotation is executed just after the all the test cases are executed.\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+To campare arrays in Junit :\
+\
+AssertarrayEquals method is used.\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+How to test exceptions in Junit ?\
+@test(excepted = nullpointerException.class)\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Performance testing:\
+@test(timeout=100)\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Parameterized tests:\
+Instead of executing the scenarios in many tests ,we can keep the scenarios in an array.\
+I will use annotation @runwith(parameterized.class)\
+\
+\
+@runWith(parameterized.class)\
+Public class classname\{\
+Private String input ;\
+Private String expectedOutput,\
+\
+Public classname(String input, string exceptedOutput)\{\
+This.input = input;\
+This. exceptedOutput = exceptedOutput\
+\}\
+@parameters\
+Public static collection testConditions().  //we need to define the parameters in an two dimensional array as input and   excepted output\
+\{\
+String expectedOutputs[][]=\{\{\'93AACD\'94,\'94CD\'94\},\{\'93ACD\'94,\'94CD\'94\}\};\
+Return arrays.asList(expectedOutputs);\
+\}\
+\}\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Stubs:\
+\
+Stub :stub is the class where it is used to implement the dummy data.\
+I will create the stub class in the src/test/java\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+Mocking:\
+Mocking is creating the object for the class or the interface.\
+\
+In TDD I can use \
+When , thenReturn methods \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+In bdd I can use \
+//Given- setup\
+Given and willretuen return \
+\
+//when-actual method call\
+\
+\
+//then-asserts\
+Instead of assert equals I can use assertthat() \
+\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+How to return multiple return values \
+Ant matchers:\
+any int() is the argument matcher..\
+\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Declare Argument captor\
+Define argument captor on specific  method call\
+Capture the argument\
+\
+ArgumentCaptor<String> stringargumentcaptor = argument captor.forclass(String.class);\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+Mockito  annotations:\
+@mock\
+@inject mocks\
+@Runwith(mockitojunitrunner.class)\
+@captor \
+\
+\
+}
